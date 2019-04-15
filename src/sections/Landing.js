@@ -1,8 +1,7 @@
 import React, { Fragment } from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import { Heading, Flex, Box, Text } from 'rebass'
-import { SectionLink } from 'react-scroll-section'
-import MouseIcon from '../components/MouseIcon'
+import Section from '../components/Section'
 
 const backgroundImage = require('../images/steven_bg.jpg')
 const bgImageStyle = {
@@ -21,7 +20,7 @@ const bgImageStyle = {
 }
 
 export default () => (
-  <div style={bgImageStyle}>
+  <Section.Container style={bgImageStyle}>
     <StaticQuery
       query={graphql`
         query LandingSectionQuery {
@@ -75,5 +74,5 @@ export default () => (
         )
       }}
     />
-  </div>
+  </Section.Container>
 )
