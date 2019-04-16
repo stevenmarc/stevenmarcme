@@ -4,6 +4,7 @@ import { Heading, Flex, Box, Text } from 'rebass'
 import Section from '../components/Section'
 
 const backgroundImage = require('../images/steven_bg.jpg')
+
 const bgImageStyle = {
   minHeight: '100vh',
   minWidth: 200,
@@ -16,11 +17,11 @@ const bgImageStyle = {
   backgroundAttachment: 'fixed',
   display: 'grid',
   gridTemplateColumns: 'minmax(200px, 600px) 1fr',
-  gridTemplateRows: '300px auto',
+  gridTemplateRows: '100px auto',
 }
 
 export default () => (
-  <Section.Container style={bgImageStyle}>
+  <Section.Container id="landing">
     <StaticQuery
       query={graphql`
         query LandingSectionQuery {
@@ -36,19 +37,20 @@ export default () => (
         const { title, body } = data.file.childDataJson
 
         return (
-          <Fragment>
+          <div style={bgImageStyle}>
             <Heading
-              textAlign="center"
+              textAlign="left"
               as="h2"
               color="white"
               fontFamily="Quicksand, sans-serif"
               fontWeight="300"
               fontSize={[3, 4, 5]}
               mb={[3, 4, 5]}
+              padding="20% 10% 10% 10%"
             >
               {title}
             </Heading>
-
+            <div />
             <Heading
               as="h3"
               color="white"
@@ -63,14 +65,14 @@ export default () => (
                     fontFamily: 'Roboto, sans-serif',
                     fontWeight: 100,
                     fontSize: '1.5em',
-                    padding: '0px 20px 20px 40px',
+                    padding: '20% 10% 0% 10%',
                     color: 'white',
                   }}
                   dangerouslySetInnerHTML={{ __html: body }}
                 />
               </div>
             </Heading>
-          </Fragment>
+          </div>
         )
       }}
     />
