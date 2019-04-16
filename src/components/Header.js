@@ -33,7 +33,7 @@ const Item = styled.li`
   padding: 10px 10px;
   font-family: Quicksand, sans-serif;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 1em;
   user-select: none;
   color: ${props =>
     props.selected ? props.theme.colors.primary_dark : 'white'};

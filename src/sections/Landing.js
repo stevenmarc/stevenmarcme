@@ -17,7 +17,7 @@ const bgImageStyle = {
   backgroundAttachment: 'fixed',
 }
 
-export default () => (
+const Landing = () => (
   <Section.Container id="landing">
     <StaticQuery
       query={graphql`
@@ -35,32 +35,36 @@ export default () => (
 
         return (
           <Flex justifyContent="left" flexWrap="wrap" style={bgImageStyle}>
-            <Heading
-              as="h2"
-              textAlign="left"
-              color="white"
-              fontFamily="Quicksand, sans-serif"
-              fontWeight="300"
-              fontSize={[3, 4, 5]}
-              padding="20% 10% 10% 10%"
-            >
-              {title}
-            </Heading>
-            <Heading
-              as="h3"
-              color="white"
-              fontSize={[2, 3, 4]}
-              textAlign="left"
-              fontFamily="Roboto, sans-serif"
-              fontWeight="100"
-              padding="20% 10% 10% 10%"
-              width={[300, 500]}
-            >
-              <Text dangerouslySetInnerHTML={{ __html: body }} />
-            </Heading>
+            <Box width={2 / 3} p={2}>
+              <Heading
+                as="h2"
+                textAlign="left"
+                color="white"
+                fontFamily="Quicksand, sans-serif"
+                fontWeight="300"
+                fontSize={[3, 4, 5]}
+                padding="5em 1em 1em 1em"
+              >
+                {title}
+              </Heading>
+              <Heading
+                as="h3"
+                color="white"
+                fontSize={[2, 3, 4]}
+                textAlign="left"
+                fontFamily="Roboto, sans-serif"
+                fontWeight="100"
+                padding="1em"
+                width={[300, 500]}
+              >
+                <Text dangerouslySetInnerHTML={{ __html: body }} />
+              </Heading>
+            </Box>
           </Flex>
         )
       }}
     />
   </Section.Container>
 )
+
+export default Landing
