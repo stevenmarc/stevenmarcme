@@ -1,6 +1,8 @@
-import React, { Fragment } from 'react'
+import React from 'react'
+import { Link } from 'gatsby'
+import StevenmarcSvg from './StevenmarcSvg'
 import Headroom from 'react-headroom'
-import { Flex, Image } from 'rebass'
+import { Flex, Box } from 'rebass'
 import styled from 'styled-components'
 import { SectionLink } from 'react-scroll-section'
 import Fade from 'react-reveal/Fade'
@@ -16,12 +18,11 @@ const HeaderContainer = styled(Headroom)`
 const Menu = styled.ul`
   position: fixed;
   z-index: 1;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 2%;
   display: table;
-  margin-left: auto;
-  margin-right: auto;
   margin: 0;
+  min-width: 280px;
+  margin-block-end: 0em;
 `
 
 const Item = styled.li`
@@ -29,11 +30,11 @@ const Item = styled.li`
   text-align: center;
   cursor: pointer;
   transition: all 0.25s;
-  margin: 0;
-  padding: 10px 10px;
+  padding: 10%, 0, 0, 0;
+  margin-right: 2%;
   font-family: Quicksand, sans-serif;
   font-weight: 300;
-  font-size: 1em;
+  font-size: 0.8em;
   user-select: none;
   color: ${props =>
     props.selected ? props.theme.colors.primary_dark : 'white'};
@@ -61,13 +62,25 @@ const Header = () => (
         alignItems="center"
         p={3}
       >
-        <Menu>
-          <MenuItem section="landing">HOME</MenuItem>
-          <MenuItem section="about">ABOUT</MenuItem>
-          <MenuItem section="projects">PROJECTS</MenuItem>
-          <MenuItem section="writing">WRITING</MenuItem>
-          <MenuItem section="contact">CONTACT</MenuItem>
-        </Menu>
+        <Box>
+          <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
+            <StevenmarcSvg
+              style={{
+                display: `inline`,
+                width: 100,
+                padding: 0,
+              }}
+            />
+          </Link>
+        </Box>
+        <Box>
+          <Menu>
+            <MenuItem section="about">ABOUT</MenuItem>
+            <MenuItem section="projects">PROJECTS</MenuItem>
+            <MenuItem section="writing">WRITING</MenuItem>
+            <MenuItem section="contact">CONTACT</MenuItem>
+          </Menu>
+        </Box>
       </Flex>
     </Fade>
   </HeaderContainer>
