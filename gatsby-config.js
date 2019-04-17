@@ -45,5 +45,12 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-source-medium`,
+      options: {
+        username: `@stevenmarc`,
+        limit: 20,
+      },
+    },
   ],
 }

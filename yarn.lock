@@ -4774,6 +4774,14 @@ gatsby-source-filesystem@^2.0.28:
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
+gatsby-source-medium@^2.0.7:
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/gatsby-source-medium/-/gatsby-source-medium-2.0.7.tgz#de5695487e21d43130a6202098782c85af988740"
+  integrity sha512-M0FsQNk7QPGc/pZY80IxVT+hgvzasD8djZ3sBbKVBg2hLUSsBEGvc5R22r0FPm3NSyMaB/+irIhe1xozZ02jQg==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    axios "^0.18.0"
+
 gatsby-telemetry@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-1.0.4.tgz#309e982919831200400e590b3fcff33735b188fd"
