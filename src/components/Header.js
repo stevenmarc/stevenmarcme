@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import StevenmarcSvg from './StevenmarcSvg'
+import LogoSvg from './LogoSvg'
 import Headroom from 'react-headroom'
 import { Flex, Box } from 'rebass'
 import styled from 'styled-components'
@@ -21,8 +21,14 @@ const Menu = styled.ul`
   right: 2%;
   display: table;
   margin: 0;
-  min-width: 280px;
-  margin-block-end: 0em;
+  margin-block-start: -1em;
+  font-size: 1em;
+  min-width: 340px;
+  @media (max-width: 440px) {
+    margin-block-start: 1em;
+    font-size: 0.8em;
+    min-width: 280px;
+  }
 `
 
 const Item = styled.li`
@@ -34,7 +40,6 @@ const Item = styled.li`
   margin-right: 2%;
   font-family: Quicksand, sans-serif;
   font-weight: 300;
-  font-size: 0.8em;
   user-select: none;
   color: ${props =>
     props.selected ? props.theme.colors.primary_dark : 'white'};
@@ -64,10 +69,9 @@ const Header = () => (
       >
         <Box>
           <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
-            <StevenmarcSvg
+            <LogoSvg
               style={{
                 display: `inline`,
-                width: 100,
                 padding: 0,
               }}
             />

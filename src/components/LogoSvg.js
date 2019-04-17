@@ -1,7 +1,8 @@
 import React from 'react'
+import styled from 'styled-components'
 
 const SvgComponent = props => (
-  <svg viewBox="0 0 201 49" {...props}>
+  <StyledLogo viewBox="0 0 201 49" {...props}>
     <text
       className="logotext"
       transform="translate(16.016 33.031)"
@@ -18,7 +19,14 @@ const SvgComponent = props => (
       strokeMiterlimit={10}
       d="M108 14V1H1v47h107V36"
     />
-  </svg>
+  </StyledLogo>
 )
+
+const StyledLogo = styled.svg`
+  width: 50%;
+  @media (max-width: 800px) {
+    width: 40%;
+  }
+`
 
 export default SvgComponent
