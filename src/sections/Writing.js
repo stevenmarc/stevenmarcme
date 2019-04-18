@@ -44,16 +44,17 @@ const Post = ({ title, text, image, url, date, time }) => (
     width={[1, 1 / 2, 1 / 2]}
     onClick={() => window.open(url, '_blank')}
     pb={4}
-    m="20px"
+    m={5}
+    bg="#f6f6ff"
+    borderRadius={8}
+    boxShadow="0 2px 16px rgba(0, 0, 0, 0.25)"
   >
     <EllipsisHeading m={3} p={1}>
       {title}
     </EllipsisHeading>
     {image && <CoverImage src={image} height="200px" alt={title} />}
     <Text m={3}>{text}</Text>
-    <div bg="primaryLight" color="white" x="right" y="bottom">
-      {`${date} - ${Math.ceil(time)} min`}
-    </div>
+    <Text ml={3}>{`${date} - ${Math.ceil(time)} min`}</Text>
   </Card>
 )
 

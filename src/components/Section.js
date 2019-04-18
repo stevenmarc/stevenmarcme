@@ -25,7 +25,7 @@ const Container = ({ id, children, Background = DefaultBackground }) => (
 
 const Header = ({ name, icon = '', label = '' }) => (
   <Slide left>
-    <Heading color="secondaryDark" mb={4}>
+    <Heading color="secondaryDark" mb={4} ml={3}>
       <div>
         {name}
         {icon && (
