@@ -5,6 +5,11 @@
       "title": "Who I am",
       "description": "I'm currently based in Berlin and available to work locally or remotely. I have extensive experience in the film and tv/web advertising industries and know the ins and outs of these worlds. I have also experience in publishing. I'm a creative problem solver and excel at finding solutions to untypical problems."
     },
+
+    {
+      "title": "Tools I like to use",
+      "description": "Javascript, React, Gatsby, Ruby on Rails, GraphQL, SCSS, SVG, Serverless, Sketch, Figma, Photoshop, Illustrator, After Effects, Premiere, DaVinci Resolve"
+    },
     {
       "title": "What I do",
       "descriptions": [
@@ -15,10 +20,6 @@
         {
           "title": "Web Apps / Mobile Apps",
           "description": "By putting the user first, I create seamless and intuitive product experiences that empower and delight users."
-        },
-        {
-          "title": "Tools",
-          "description": "Javascript, React, Gatsby, Ruby on Rails, GraphQL, SCSS, SVG, Serverless, Sketch, Figma, Photoshop, Illustrator, After Effects, Premiere, DaVinci Resolve"
         }
       ]
     }
