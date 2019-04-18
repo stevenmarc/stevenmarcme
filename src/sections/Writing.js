@@ -1,9 +1,10 @@
 import React from 'react'
-import Section from '../components/Section'
+import { Heading, Text } from 'rebass'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade'
-import { Heading, Text, Card } from 'rebass'
+import Section from '../components/Section'
+import { CardContainer, Card } from '../components/Card'
 
 const parsePost = postFromGraphql => {
   const MEDIUM_CDN = 'https://cdn-images-1.medium.com/max/400'
@@ -36,19 +37,11 @@ const EllipsisHeading = styled(Heading)`
   display: -webkit-inline-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  border-bottom: ${props => props.theme.colors.primary} 5px solid;
+  border-bottom: ${props => props.theme.colors.primary_dark} 5px solid;
 `
 
 const Post = ({ title, text, image, url, date, time }) => (
-  <Card
-    width={[1, 1 / 2, 1 / 2]}
-    onClick={() => window.open(url, '_blank')}
-    pb={4}
-    m={5}
-    bg="#f6f6ff"
-    borderRadius={8}
-    boxShadow="0 2px 16px rgba(0, 0, 0, 0.25)"
-  >
+  <Card onClick={() => window.open(url, '_blank')} pb={4}>
     <EllipsisHeading m={3} p={1}>
       {title}
     </EllipsisHeading>
@@ -89,13 +82,13 @@ const Writing = () => (
       return (
         <Section.Container id="writing">
           <Section.Header name="Writing" label="writing" />
-          <Card minWidth="300px">
+          <CardContainer minWidth="300px">
             {posts.map(p => (
-              <Fade bottom>
-                <Post key={p.id} {...p} />
+              <Fade key={p.id} bottom>
+                <Post {...p} />
               </Fade>
             ))}
-          </Card>
+          </CardContainer>
         </Section.Container>
       )
     }}
