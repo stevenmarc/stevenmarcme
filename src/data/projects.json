@@ -1,28 +1,36 @@
 {
   "projects": [
     {
-      "title": "Project 1",
-      "website": "https://example.com",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis.",
-      "image": "./../images/image1.jpg"
+      "name": "Isabelle Lukacie",
+      "projectUrl": "http://lukacie.com",
+      "description": "Website created for the film director Isabelle Lukacie.",
+      "image": "./../images/lukacie01.png",
+      "publishedDate": "2019",
+      "type": "website"
     },
     {
-      "title": "Project 2",
-      "website": "https://example.com",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis.",
-      "image": "./../images/image2.jpg"
+      "name": "SMC Productions",
+      "projectUrl": "http://smcproductions.com",
+      "description": "Website created for the film production company SMC Productions.",
+      "image": "./../images/image2.jpg",
+      "publishedDate": "2019",
+      "type": "website"
     },
     {
-      "title": "Project 3",
-      "website": "https://example.com",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis.",
-      "image": "./../images/image3.jpg"
+      "name": "Oozup",
+      "projectUrl": "https://example.com",
+      "description": "A mobile app developed for iOS and Android, for which I was CTO and backend developer.",
+      "image": "./../images/image3.jpg",
+      "publishedDate": "2019",
+      "type": "Mobile App"
     },
     {
-      "title": "Project 4",
-      "website": "https://example.com",
+      "name": "FilmSharp",
+      "projectUrl": "https://filmsharp.com",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis.",
-      "image": "./../images/image4.jpg"
+      "image": "./../images/image4.jpg",
+      "publishedDate": "2019",
+      "type": "Saas"
     }
   ]
 }
