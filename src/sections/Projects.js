@@ -90,7 +90,7 @@ const Project = ({
       </TextContainer>
 
       <ImageContainer>
-        <ProjectImage src={image} alt={''} />
+        <ProjectImage src={image.src.publicURL} alt={image.name} />
         <ProjectTag>
           <Flex
             style={{
@@ -133,7 +133,12 @@ const Projects = () => (
             childDataJson {
               projects {
                 name
-                image
+                image {
+                  name
+                  src {
+                    publicURL
+                  }
+                }
                 description
                 projectUrl
                 publishedDate(formatString: "YYYY")
