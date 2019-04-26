@@ -42,6 +42,12 @@ module.exports = {
             family: `Quicksand`,
             variants: [`300`],
           },
+          {
+            family: `Special Elite`,
+          },
+          {
+            family: `Patrick Hand`,
+          },
         ],
       },
     },
