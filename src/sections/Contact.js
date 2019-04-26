@@ -3,30 +3,53 @@ import Section from '../components/Section'
 import styled from 'styled-components'
 import postcardbackground from './../images/retro_postcard_opt.svg'
 
+const MEDIA_QUERY_SMALL = '@media (max-width: 750px)'
+
 const Form = styled.form`
   position: relative;
   width: 740px;
   height: 498px;
   margin: 0 auto;
   background: #ffffff url(${postcardbackground}) no-repeat;
+  ${MEDIA_QUERY_SMALL} {
+    width: auto;
+    height: auto;
+    margin: 0 0;
+    background: #ffffff;
+  }
 `
 
 const FromContainer = styled.div`
   position: absolute;
   left: 398px;
   top: 230px;
+  ${MEDIA_QUERY_SMALL} {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+  }
 `
 
 const ReplyContainer = styled.div`
   position: absolute;
   left: 390px;
   top: 285px;
+  ${MEDIA_QUERY_SMALL} {
+    position: absolute;
+    left: 20px;
+    top: 50px;
+  }
 `
 
 const MessageContainer = styled.div`
   position: absolute;
   left: 20px;
   top: 70px;
+  ${MEDIA_QUERY_SMALL} {
+    position: absolute;
+    left: 20px;
+    top: 100px;
+  }
 `
 
 const Label = styled.label`
@@ -66,6 +89,10 @@ const TextArea = styled.textarea`
   height: 360px;
   resize: none;
   overflow: auto;
+  ${MEDIA_QUERY_SMALL} {
+    width: auto;
+    height: 200px;
+  }
   &:focus {
     background: rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -88,6 +115,11 @@ const SendButton = styled.button`
   -ms-transform: rotate(-1.5deg);
   -o-transform: rotate(-1.5deg);
   transform: rotate(-1.5deg);
+  ${MEDIA_QUERY_SMALL} {
+    position: absolute;
+    left: 20px;
+    top: 340px;
+  }
   &:after {
     content: ' >>>';
   }
@@ -105,7 +137,7 @@ const SendButton = styled.button`
 
 const Contact = () => (
   <Section.Container id="contact">
-    <Section.Header name="Contact me" icon="🙋‍♂️" label="person" />
+    <Section.Header name="Contact me" />
     <Form
       name="contact"
       method="post"
@@ -116,7 +148,7 @@ const Contact = () => (
       <input type="hidden" name="form-name" value="contact" />
       <FromContainer>
         <Label htmlFor="name">from:</Label>
-        <Input name type="text" name="name" id="name" placeholder="your name" />
+        <Input type="text" name="name" id="name" placeholder="your name" />
       </FromContainer>
       <ReplyContainer>
         <Label htmlFor="email">reply:</Label>

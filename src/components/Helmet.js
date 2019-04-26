@@ -3,7 +3,6 @@ import ReactHelmet from 'react-helmet'
 
 const title = 'StevenMarc'
 const description = 'My portfolio website'
-const profile = ''
 const theme = ''
 
 const Helmet = () => (

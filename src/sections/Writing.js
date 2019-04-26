@@ -81,7 +81,7 @@ const Writing = () => (
       const posts = edgeToArray(allMediumPost).map(parsePost)
       return (
         <Section.Container id="writing">
-          <Section.Header name="Writing" label="writing" />
+          <Section.Header name="Writing" />
           <CardContainer minWidth="300px">
             {posts.map(p => (
               <Fade key={p.id} bottom>

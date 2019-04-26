@@ -23,17 +23,10 @@ const Container = ({ id, children, Background = DefaultBackground }) => (
   </Section>
 )
 
-const Header = ({ name, icon = '', label = '' }) => (
+const Header = ({ name }) => (
   <Slide left>
-    <Heading color="secondaryDark" mb={4} ml={3}>
-      <div>
-        {name}
-        {icon && (
-          <span role="img" aria-label={label} style={{ marginLeft: '10px' }}>
-            {icon}
-          </span>
-        )}
-      </div>
+    <Heading color="primary_dark" mb={4} ml={3}>
+      <div>{name}</div>
     </Heading>
   </Slide>
 )

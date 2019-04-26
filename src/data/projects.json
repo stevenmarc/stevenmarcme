@@ -3,7 +3,7 @@
     {
       "name": "Isabelle Lukacie",
       "projectUrl": "http://lukacie.com",
-      "description": "Website created for the film director Isabelle Lukacie.",
+      "description": "Website created for the film director and painter Isabelle Lukacie.",
       "image": {
         "name": "lukacie",
         "src": "./../images/lukacie01.png"
@@ -17,18 +17,18 @@
       "description": "Website created for the film production company SMC Productions.",
       "image": {
         "name": "smcproductions",
-        "src": "./../images/lukacie01.png"
+        "src": "./../images/smcprod01.png"
       },
       "publishedDate": "2019",
       "type": "website"
     },
     {
       "name": "Oozup",
-      "projectUrl": "https://example.com",
+      "projectUrl": "https://oozup.io",
       "description": "A mobile app developed for iOS and Android, for which I was CTO and backend developer.",
       "image": {
         "name": "oozup",
-        "src": "./../images/lukacie01.png"
+        "src": "./../images/oozup01.png"
       },
       "publishedDate": "2019",
       "type": "Mobile App"
@@ -36,10 +36,10 @@
     {
       "name": "FilmSharp",
       "projectUrl": "https://filmsharp.com",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis.",
+      "description": "A project management SAAS dedicated to film productions. Fullstack development.",
       "image": {
         "name": "filmsharp",
-        "src": "./../images/lukacie01.png"
+        "src": "./../images/filmsharp01.png"
       },
       "publishedDate": "2019",
       "type": "Saas"

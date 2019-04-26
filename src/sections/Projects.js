@@ -18,7 +18,7 @@ const Title = styled(Text)`
   font-weight: 600;
   text-transform: uppercase;
   display: table;
-  border-bottom: ${props => props.theme.colors.primary} 5px solid;
+  border-bottom: ${props => props.theme.colors.primary_dark} 5px solid;
 `
 
 const TextContainer = styled.div`
@@ -44,8 +44,8 @@ const ImageContainer = styled.div`
 
 const ProjectImage = styled(Image)`
   width: ${CARD_HEIGHT};
-  height: ${CARD_HEIGHT};
-  padding: 40px;
+  height: ${CARD_HEIGHT} / 1.2;
+  padding: 40px 10px 40px 10px;
   margin-top: 0px;
 
   ${MEDIA_QUERY_SMALL} {
@@ -107,7 +107,7 @@ const Project = ({
           </Flex>
           <ImageSubtitle
             bg="primaryLight"
-            color="white"
+            color="black"
             y="bottom"
             x="right"
             round
@@ -125,7 +125,7 @@ const Project = ({
 
 const Projects = () => (
   <Section.Container id="projects">
-    <Section.Header name="Projects" icon="💻" Box="notebook" />
+    <Section.Header name="Projects" />
     <StaticQuery
       query={graphql`
         query ProjectsQuery {
@@ -149,7 +149,6 @@ const Projects = () => (
         }
       `}
       render={data => {
-        console.log(data)
         return (
           <CardContainer minWidth="350px">
             {data.file.childDataJson.projects.map((p, i) => (
