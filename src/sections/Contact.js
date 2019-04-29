@@ -26,7 +26,7 @@ const FromContainer = styled.div`
   ${MEDIA_QUERY_SMALL} {
     position: absolute;
     left: 20px;
-    top: 20px;
+    top: 40px;
   }
 `
 
@@ -37,7 +37,7 @@ const ReplyContainer = styled.div`
   ${MEDIA_QUERY_SMALL} {
     position: absolute;
     left: 20px;
-    top: 50px;
+    top: 70px;
   }
 `
 
@@ -48,7 +48,7 @@ const MessageContainer = styled.div`
   ${MEDIA_QUERY_SMALL} {
     position: absolute;
     left: 20px;
-    top: 100px;
+    top: 120px;
   }
 `
 
@@ -116,9 +116,10 @@ const SendButton = styled.button`
   transform: rotate(-1.5deg);
   ${MEDIA_QUERY_SMALL} {
     position: absolute;
-    left: 30%;
-    top: 340px;
+    left: 50px;
+    top: 380px;
     margin-bottom: 100px;
+    min-width: 130px;
   }
   &:after {
     content: ' >>>';

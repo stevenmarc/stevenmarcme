@@ -12,6 +12,9 @@ const FooterContainer = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media screen and (max-height: 420px) {
+    display: none;
+  }
 `
 
 const Footer = () => (
@@ -23,7 +26,6 @@ const Footer = () => (
           pb={1}
           style={{
             textTransform: 'uppercase',
-            borderBottom: 'white 3px solid',
             display: 'table',
           }}
         >
