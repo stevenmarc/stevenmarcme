@@ -116,7 +116,7 @@ const SendButton = styled.button`
   transform: rotate(-1.5deg);
   ${MEDIA_QUERY_SMALL} {
     position: absolute;
-    left: 20px;
+    left: 30%;
     top: 340px;
     margin-bottom: 100px;
   }

@@ -4,8 +4,7 @@ import { Text, Flex, Box } from 'rebass'
 import Fade from 'react-reveal/Fade'
 
 const FooterContainer = styled.footer`
-  padding: 1em;
-  margin-top: 4em;
+  padding: 4em 1em 1em 1em;
   background: ${props => props.theme.colors.primaryDark};
   color: ${props => props.theme.colors.background};
   display: flex;
