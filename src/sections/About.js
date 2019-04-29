@@ -59,7 +59,7 @@ const About = () => (
                 fontFamily="Quicksand, sans-serif"
                 fontWeight="300"
                 fontSize={[3, 4, 5]}
-                padding="0.5em 1em 1em 1em"
+                padding="0.5em 1em 0em 1em"
               >
                 {bodies[1].title}
               </Heading>
@@ -85,7 +85,7 @@ const About = () => (
                 fontFamily="Quicksand, sans-serif"
                 fontWeight="300"
                 fontSize={[3, 4, 5]}
-                padding="1em 1em 1em 1em"
+                padding="1em 1em 0em 1em"
               >
                 {bodies[2].title}
               </Heading>
@@ -96,7 +96,7 @@ const About = () => (
                 fontFamily="Quicksand, sans-serif"
                 fontWeight="300"
                 fontSize={[2, 3, 4]}
-                padding="1em 1em 1em 1em"
+                padding="1em 1em 0em 1em"
               >
                 {bodies[2].descriptions[0].title}
               </Heading>
@@ -122,7 +122,7 @@ const About = () => (
                 fontFamily="Quicksand, sans-serif"
                 fontWeight="300"
                 fontSize={[2, 3, 4]}
-                padding="1em 1em 1em 1em"
+                padding="1em 1em 0em 1em"
               >
                 {bodies[2].descriptions[1].title}
               </Heading>

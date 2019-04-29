@@ -16,18 +16,18 @@ const HeaderContainer = styled(Headroom)`
 `
 
 const Menu = styled.ul`
-  position: fixed;
+  position: absolute;
   z-index: 1;
-  right: 2%;
-  display: table;
+  right: 5%;
   margin: 0;
   margin-block-start: -1em;
   font-size: 1em;
   min-width: 340px;
-  @media (max-width: 440px) {
-    margin-block-start: 1em;
+  @media (max-width: 480px) {
+    margin-block-start: 0em;
     font-size: 0.8em;
     min-width: 280px;
+    right: 1%;
   }
 `
 
@@ -41,11 +41,10 @@ const Item = styled.li`
   font-family: Quicksand, sans-serif;
   font-weight: 300;
   user-select: none;
-  color: ${props =>
-    props.selected ? props.theme.colors.primary_dark : 'white'};
-  border-top: 5px solid
-    ${props =>
-      props.selected ? props.theme.colors.primary_dark : 'transparent'};
+  color: ${props => (props.selected ? props.theme.colors.color4 : 'white')};
+  &:hover {
+    color: ${props => props.theme.colors.secondary};
+  }
 `
 
 const MenuItem = ({ section, children }) => (
@@ -61,20 +60,10 @@ const MenuItem = ({ section, children }) => (
 const Header = () => (
   <HeaderContainer>
     <Fade top>
-      <Flex
-        flexWrap="wrap"
-        justifyContent="space-between"
-        alignItems="center"
-        p={3}
-      >
+      <Flex justifyContent="space-between" alignItems="center" p={3}>
         <Box>
-          <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
-            <LogoSvg
-              style={{
-                display: `inline`,
-                padding: 0,
-              }}
-            />
+          <Link to="/">
+            <LogoSvg />
           </Link>
         </Box>
         <Box>

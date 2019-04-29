@@ -10,7 +10,7 @@ const SectionContainer = styled.div`
   display: flex;
   flex: 0 1 auto;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   scroll-behavior: smooth;
 `
 
@@ -25,7 +25,7 @@ const Container = ({ id, children, Background = DefaultBackground }) => (
 
 const Header = ({ name }) => (
   <Slide left>
-    <Heading color="primary_dark" mb={4} ml={3}>
+    <Heading color="primary_dark" mt={10} mb={4} ml={3}>
       <div>{name}</div>
     </Heading>
   </Slide>

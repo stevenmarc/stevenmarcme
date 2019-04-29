@@ -90,7 +90,6 @@ const TextArea = styled.textarea`
   resize: none;
   overflow: auto;
   ${MEDIA_QUERY_SMALL} {
-    width: auto;
     height: 200px;
   }
   &:focus {
@@ -119,6 +118,7 @@ const SendButton = styled.button`
     position: absolute;
     left: 20px;
     top: 340px;
+    margin-bottom: 100px;
   }
   &:after {
     content: ' >>>';

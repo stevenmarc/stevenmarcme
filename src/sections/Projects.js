@@ -125,7 +125,7 @@ const Project = ({
 
 const Projects = () => (
   <Section.Container id="projects">
-    <Section.Header name="Projects" />
+    <Section.Header name="Some latest projects" />
     <StaticQuery
       query={graphql`
         query ProjectsQuery {
