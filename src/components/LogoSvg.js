@@ -24,7 +24,6 @@ const SvgComponent = props => (
 
 const StyledLogo = styled.svg`
   width: 50%;
-  text-decoration: none;
   &:hover {
     transform: scale(1.1);
   }

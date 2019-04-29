@@ -62,7 +62,12 @@ const Header = () => (
     <Fade top>
       <Flex justifyContent="space-between" alignItems="center" p={3}>
         <Box>
-          <Link to="/">
+          <Link
+            to="/"
+            style={{
+              textDecoration: `none`,
+            }}
+          >
             <LogoSvg />
           </Link>
         </Box>
