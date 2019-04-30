@@ -1,7 +1,18 @@
 import React from 'react'
 import Section from '../components/Section'
 import { StaticQuery, graphql } from 'gatsby'
-import { Heading, Flex, Box, Text } from 'rebass'
+import { Heading as BaseHeading, Flex, Box, Text as BaseText } from 'rebass'
+import styled from 'styled-components'
+
+const Heading = styled(BaseHeading)`
+  font-family: Quicksand, sans-serif;
+  font-weight: 300;
+`
+
+const Text = styled(BaseText)`
+  font-family: Roboto, sans-serif;
+  font-weight: 100;
+`
 
 const About = () => (
   <Section.Container id="about">
@@ -28,119 +39,52 @@ const About = () => (
         return (
           <Flex m="10px" justifyContent="left" flexWrap="wrap">
             <Box width={[1, 1, 1 / 2]} p={2}>
-              <Heading
-                as="h2"
-                textAlign="left"
-                color="black"
-                fontFamily="Quicksand, sans-serif"
-                fontWeight="300"
-                fontSize={[3, 4, 5]}
-                padding="0.5em 1em 1em 1em"
-              >
+              <Heading fontSize={[3, 4, 5]} padding="0.5em 1em 1em 1em">
                 {bodies[0].title}
               </Heading>
-              <Heading
-                as="h3"
-                color="black"
+              <Text
                 fontSize={[2, 3, 4]}
-                textAlign="left"
-                fontFamily="Roboto, sans-serif"
-                fontWeight="100"
                 padding="0.5em 1em 1em 1em"
-              >
-                <Text
-                  dangerouslySetInnerHTML={{ __html: bodies[0].description }}
-                />
-              </Heading>
-              <Heading
-                as="h2"
-                textAlign="left"
-                color="black"
-                fontFamily="Quicksand, sans-serif"
-                fontWeight="300"
-                fontSize={[3, 4, 5]}
-                padding="0.5em 1em 0em 1em"
-              >
+                dangerouslySetInnerHTML={{ __html: bodies[0].description }}
+              />
+
+              <Heading fontSize={[3, 4, 5]} padding="0.5em 1em 1em 1em">
                 {bodies[1].title}
               </Heading>
-              <Heading
-                as="h3"
-                color="black"
+
+              <Text
                 fontSize={[2, 3, 4]}
-                textAlign="left"
-                fontFamily="Roboto, sans-serif"
-                fontWeight="100"
                 padding="0.5em 1em 1em 1em"
-              >
-                <Text
-                  dangerouslySetInnerHTML={{ __html: bodies[1].description }}
-                />
-              </Heading>
+                dangerouslySetInnerHTML={{ __html: bodies[1].description }}
+              />
             </Box>
             <Box width={[1, 1, 1 / 2]} p={2}>
-              <Heading
-                as="h2"
-                textAlign="left"
-                color="black"
-                fontFamily="Quicksand, sans-serif"
-                fontWeight="300"
-                fontSize={[3, 4, 5]}
-                padding="1em 1em 0em 1em"
-              >
+              <Heading fontSize={[3, 4, 5]} padding="0.5em 1em 0em 1em">
                 {bodies[2].title}
               </Heading>
-              <Heading
-                as="h2"
-                textAlign="left"
-                color="black"
-                fontFamily="Quicksand, sans-serif"
-                fontWeight="300"
-                fontSize={[2, 3, 4]}
-                padding="1em 1em 0em 1em"
-              >
+              <Heading fontSize={[2, 3, 4]} padding="1em 1em 0em 1em">
                 {bodies[2].descriptions[0].title}
               </Heading>
-              <Heading
-                as="h3"
-                color="black"
+
+              <Text
                 fontSize={[2, 3, 4]}
-                textAlign="left"
-                fontFamily="Roboto, sans-serif"
-                fontWeight="100"
                 padding="1em"
-              >
-                <Text
-                  dangerouslySetInnerHTML={{
-                    __html: bodies[2].descriptions[0].description,
-                  }}
-                />
-              </Heading>
-              <Heading
-                as="h2"
-                textAlign="left"
-                color="black"
-                fontFamily="Quicksand, sans-serif"
-                fontWeight="300"
-                fontSize={[2, 3, 4]}
-                padding="1em 1em 0em 1em"
-              >
+                dangerouslySetInnerHTML={{
+                  __html: bodies[2].descriptions[0].description,
+                }}
+              />
+
+              <Heading fontSize={[2, 3, 4]} padding="1em 1em 0em 1em">
                 {bodies[2].descriptions[1].title}
               </Heading>
-              <Heading
-                as="h3"
-                color="black"
+
+              <Text
                 fontSize={[2, 3, 4]}
-                textAlign="left"
-                fontFamily="Roboto, sans-serif"
-                fontWeight="100"
                 padding="1em"
-              >
-                <Text
-                  dangerouslySetInnerHTML={{
-                    __html: bodies[2].descriptions[1].description,
-                  }}
-                />
-              </Heading>
+                dangerouslySetInnerHTML={{
+                  __html: bodies[2].descriptions[1].description,
+                }}
+              />
             </Box>
           </Flex>
         )

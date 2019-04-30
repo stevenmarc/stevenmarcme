@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Text, Flex, Box } from 'rebass'
+import { Text } from 'rebass'
 import Fade from 'react-reveal/Fade'
 
 const FooterContainer = styled.footer`
