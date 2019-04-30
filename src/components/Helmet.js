@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactHelmet from 'react-helmet'
 
-const title = 'StevenMarc'
+const title = 'Steven-Marc Couchouron'
 const description = 'My portfolio website'
 const theme = ''
 
